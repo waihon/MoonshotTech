@@ -14,7 +14,7 @@ struct ContentView: View {
         Image("SwiftUI")
           .resizable()
           .aspectRatio(contentMode: .fit)
-          .frame(width: geo.size.width, height: 300)
+          .frame(width: geo.size.width)
       }
     }
   }
