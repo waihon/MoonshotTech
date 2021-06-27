@@ -11,6 +11,7 @@ struct ContentView: View {
   var body: some View {
     Image("SwiftUI")
       .frame(width: 300, height: 300)
+      .clipped()
   }
 }
 
