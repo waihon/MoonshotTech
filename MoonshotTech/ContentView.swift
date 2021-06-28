@@ -28,12 +28,12 @@ struct CustomText: View {
   }
   
   init(_ text: String) {
-    print("Creating a new CustomText")
+    print("Creating a new CustomText: \(text)")
     self.text = text
   }
 }
 
-struct ContentView: View {
+struct ScrollContentView: View {
   var body: some View {
     ScrollView(.vertical) {
       VStack(spacing: 10) {
@@ -43,6 +43,17 @@ struct ContentView: View {
         }
       }
       .frame(maxWidth: .infinity)
+    }
+  }
+}
+
+struct ContentView: View {
+  var body: some View {
+    List {
+      ForEach(0..<100) {
+        CustomText("Item \($0)")
+          .font(.title)
+      }
     }
   }
 }
