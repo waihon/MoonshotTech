@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GeometryReaderView: View {
   var body: some View {
     VStack {
       GeometryReader { geo in
