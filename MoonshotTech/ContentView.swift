@@ -61,9 +61,9 @@ struct ListContentView: View {
 struct ContentView: View {
   var body: some View {
     NavigationView {
-      VStack {
-        NavigationLink(destination: Text("Detail View")) {
-          Text("Hello, SwiftUI")
+      List(0..<100) { row in
+        NavigationLink(destination: Text("Detail \(row)")) {
+          Text("Row \(row)")
         }
       }
       .navigationBarTitle("SwiftUI")
