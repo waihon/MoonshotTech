@@ -71,6 +71,16 @@ struct NavLinkContentView: View {
   }
 }
 
+struct User: Codable {
+  var name: String
+  var address: Address
+}
+
+struct Address: Codable {
+  var string: String
+  var city: String
+}
+
 struct ContentView: View {
   var body: some View {
     Button("Decode JSON") {
