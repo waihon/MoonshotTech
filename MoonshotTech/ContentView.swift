@@ -77,7 +77,7 @@ struct User: Codable {
 }
 
 struct Address: Codable {
-  var string: String
+  var street: String
   var city: String
 }
 
