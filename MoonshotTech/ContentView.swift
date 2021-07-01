@@ -58,7 +58,7 @@ struct ListContentView: View {
   }
 }
 
-struct ContentView: View {
+struct NavLinkContentView: View {
   var body: some View {
     NavigationView {
       List(0..<100) { row in
@@ -71,6 +71,23 @@ struct ContentView: View {
   }
 }
 
+struct ContentView: View {
+  var body: some View {
+    Button("Decode JSON") {
+      let input = """
+      {
+        "name": "Taylor Swift",
+        "address": {
+          "street": "555, Taylor Swift Avenue",
+          "city": "Nashville"
+        }
+      }
+      """
+      
+      // More code to come
+    }
+  }
+}
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
