@@ -62,7 +62,9 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       VStack {
-        Text("Hello, SwiftUI")
+        NavigationLink(destination: Text("Detail View")) {
+          Text("Hello, SwiftUI")
+        }
       }
       .navigationBarTitle("SwiftUI")
     }
