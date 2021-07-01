@@ -47,13 +47,24 @@ struct ScrollContentView: View {
   }
 }
 
-struct ContentView: View {
+struct ListContentView: View {
   var body: some View {
     List {
       ForEach(0..<100) {
         CustomText("Item \($0)")
           .font(.title)
       }
+    }
+  }
+}
+
+struct ContentView: View {
+  var body: some View {
+    NavigationView {
+      VStack {
+        Text("Hello, SwiftUI")
+      }
+      .navigationBarTitle("SwiftUI")
     }
   }
 }
